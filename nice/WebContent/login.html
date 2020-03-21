@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<link rel="stylesheet" href="/nice/script/nice.css">
+<script src="script/jquery-3.4.1.js"></script>
+<script src="script/comm.js"></script>
+<script type="text/javascript" src="login.js"></script>
+</head>
+<body>
+<div class="nice_header">
+	<p class="nice_title" id="id_nice_title">欢迎您登录网址管理系统！</p>
+</div>
+<div class="nice_body">
+<form action="/nice/CommServlet" id="id_form" method="post">
+	<div class="nice_one_row">
+		<label>用户名称：</label><input class="nice_input" type="text" name="username" id="username"/>
+	</div>
+
+	<div class="nice_one_row">
+		<label>用户密码：</label><input class="nice_input"  type="password" name="userpass" id="userpass"/>
+	</div>
+	
+	<div class="nice_one_row">
+		<button id="submit" name="submit" value="submit" class="nice_button">登录</button>
+	</div>
+	
+	<input hidden="true" name="txtype" id="txtype" value="login"/>
+</form>
+</div>
+<div class="nice_header">
+	<span class="nice_title3" id="refreshTime">现在时间:</span><span class="nice_title3" id="footerInfo"></span>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>nice主页</title>
+<link rel="stylesheet" href="/nice/script/nice.css">
+<script src="/nice/script/jquery-3.4.1.js"></script>
+<script src="/nice/script/vue.js"></script>
+<script src="/nice/script/comm.js"></script>
+<script src="index.js"></script>
+</head>
+<body>
+<h1>VUE</h1>
+<div id="info1"></div>
+
+<div id="app">{{message}}</div>
+
+<div id="example-1">
+  <button v-on:click="counter += 1">增加 1</button>
+  <p>这个按钮被点击了 {{ counter }} 次。</p>
+</div>
+
+<div id="example-2">
+  <!-- `greet` 是在下面定义的方法名 -->
+  <button v-on:click="greet">Greet</button>
+</div>
+
+<img alt="图片" src="script/succ.png" width="80px" height="60px"><span>交易成功</span>
+
+<div id="btn">
+	<button id="submit">Load</button>
+</div>
+
+<div id="div_info"></div>
+</body>
+</html>

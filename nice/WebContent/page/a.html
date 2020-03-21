@@ -1,0 +1,34 @@
+<div id="test">
+
+<p>动态加载html测试页面</p>
+	<div class="nice_one_row">
+		<label class="nice_lable">名称：</label><input class="nice_input"
+			type="text" name="name" id="name" />
+	</div>
+	<button id="query">查询结果</button>
+
+<ul id="ret">
+
+</ul>
+</div>
+
+<script type="text/javascript">
+	var opt = {
+		txtype : "query",
+		data : {
+			name : "test"
+		},
+		success : function(data) {
+			$("#ret").empty();
+			for(var i in data.BK_DATA.DB_RESULT){
+				$("#ret").append("<li>编号："+ data.BK_DATA.DB_RESULT[i].id + " 名称："+ data.BK_DATA.DB_RESULT[i].name + " URL：" + data.BK_DATA.DB_RESULT[i].url + "</li>");
+			}
+		},
+		failure : function(data) {
+			$("#ret").text(JSON.stringify(data));
+		}
+	}
+	$("#query").click(function() {
+		comm.Submit(opt);
+	});
+</script>
